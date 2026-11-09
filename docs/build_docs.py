@@ -68,6 +68,7 @@ def bullet(t):
 title("个人介绍静态主页 · 项目复盘报告")
 sub("《Web 前端开发》课程项目 · 任务三（页面集成、优化部署与复盘）")
 sub("团队：%s　　姓名：%s　　学号：%s　　指导教师：%s" % (TEAM, NAME, SID, TEACHER))
+sub("线上地址：https://tomoririri.github.io/-/　　（GitHub Pages · main 分支自动部署）")
 
 h2("一、这个项目做了什么")
 
@@ -209,6 +210,7 @@ bg = s.shapes.add_shape(1, 0, 0, prs.slide_width, prs.slide_height)
 bg.fill.solid(); bg.fill.fore_color.rgb = SOFT; bg.line.fill.background()
 text(s, "个人介绍静态主页", Inches(0.9), Inches(2.2), Inches(11), Inches(1.0), 44, INK, True)
 text(s, "基于组件化与语义化的前端实践", Inches(0.9), Inches(3.3), Inches(11), Inches(0.6), 22, BODY)
+text(s, "线上演示：https://tomoririri.github.io/-/", Inches(0.9), Inches(4.85), Inches(11), Inches(0.4), 14, PRIMARY)
 text(s, "团队 %s　　姓名 %s　　学号 %s　　指导教师 %s" % (TEAM, NAME, SID, TEACHER),
      Inches(0.9), Inches(4.4), Inches(11), Inches(0.5), 14, MUTED)
 
