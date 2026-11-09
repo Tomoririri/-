@@ -288,7 +288,47 @@ bullets(s, [
     "按维度验收能发现问题：手机点开菜单再点链接，菜单不会自动收起，这个用鼠标点不出来",
 ], Inches(0.9), Inches(2.0), Inches(11.4), Inches(3.8), 18)
 
-# 9 结尾
+# 9 项目结构
+s = add_slide()
+text(s, "项目结构", Inches(0.9), Inches(0.8), Inches(11), Inches(0.7), 30, INK, True)
+bar(s)
+tree = [
+    "personal-homepage/",
+    "├─ index.html            演示页，用 data-include 引入组件",
+    "├─ components/",
+    "│   ├─ header.html       品牌 + 导航 + 汉堡按钮",
+    "│   ├─ nav.html          只含导航，可单独复用",
+    "│   └─ footer.html       版权与站内链接",
+    "├─ css/",
+    "│   └─ common.css        设计令牌 + 组件样式 + 响应式",
+    "├─ js/",
+    "│   ├─ common.js         菜单开关、断点复位、年份",
+    "│   └─ include.js        纯静态的组件引入",
+    "└─ docs/                 复盘报告与答辩 PPT",
+]
+box = s.shapes.add_textbox(Inches(0.9), Inches(2.0), Inches(11.4), Inches(4.6))
+tf = box.text_frame; tf.word_wrap = True
+for i, line in enumerate(tree):
+    p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+    p.space_after = PPt(2)
+    r = p.add_run(); r.text = line
+    r.font.size = PPt(14); r.font.name = "Consolas"
+    r.font.color.rgb = INK if i == 0 else BODY
+
+# 10 分工
+s = add_slide()
+text(s, "小组分工", Inches(0.9), Inches(0.8), Inches(11), Inches(0.7), 30, INK, True)
+bar(s)
+bullets(s, [
+    "韦林非凡 —— 前端实现：组件拆分、样式令牌、响应式与无障碍，文档与答辩",
+    "李林峰 —— 需求调研与访谈主持，功能优先级梳理",
+    "田世宽 —— 素材采集与视觉：截图、图标与版式核对",
+    "邱梓明 —— 测试与整理：多端验收、问题记录、文件归档",
+], Inches(0.9), Inches(2.0), Inches(11.4), Inches(3.2), 18)
+text(s, "（分工按小组记录整理，答辩时按实际情况说明）",
+     Inches(0.9), Inches(5.6), Inches(11.4), Inches(0.5), 14, MUTED)
+
+# 11 结尾
 s = add_slide()
 bg = s.shapes.add_shape(1, 0, 0, prs.slide_width, prs.slide_height)
 bg.fill.solid(); bg.fill.fore_color.rgb = SOFT; bg.line.fill.background()

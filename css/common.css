@@ -15,13 +15,13 @@
 
 /* ---------- 1. 设计令牌 ---------- */
 :root {
-  /* 颜色 */
-  --color-primary: #2F6BFF;
-  --color-primary-dark: #1E52CC;
-  --color-primary-soft: rgba(47, 107, 255, .10);
+  /* 颜色：全部满足 WCAG AA 对比度（正文 >= 4.5:1） */
+  --color-primary: #2559D6;
+  --color-primary-dark: #1A47B0;
+  --color-primary-soft: #E8EFFC;
   --color-ink: #1B2027;
   --color-body: #4A5462;
-  --color-muted: #8A94A3;
+  --color-muted: #6B7583;
   --color-bg: #FFFFFF;
   --color-bg-soft: #F6F8FB;
   --color-line: rgba(27, 32, 39, .08);
