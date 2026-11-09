@@ -241,7 +241,7 @@ s = add_slide()
 text(s, "风格统一靠设计令牌守住", Inches(0.9), Inches(0.8), Inches(11), Inches(0.7), 30, INK, True)
 bar(s)
 bullets(s, [
-    "主色 #2F6BFF　正文 #4A5462　弱化 #8A94A3",
+    "主色 #2559D6　正文 #4A5462　弱化 #6B7583（都过 WCAG AA 4.5:1）",
     "底色 #FFFFFF / #F6F8FB　间距基数 8px　圆角 12px",
     "全部定义在 :root，组件里只引用变量，不写死色值",
     "自查规矩：提交前搜一遍十六进制，除了 :root 那几行，别处出现就算错",
