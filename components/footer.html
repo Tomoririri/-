@@ -1,0 +1,42 @@
+<!-- ============================================================
+     footer.html —— 页脚组件
+     用法：放在每页 <body> 末尾，紧挨着 </body>。
+     语义：<footer> 表示最近的章节/页面尾部，版权与联络信息属于它。
+     年份由 js/common.js 写入 [data-current-year]，不用每年手改。
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__title">韦林非凡 · 个人主页</p>
+        <p class="site-footer__desc">
+          基于组件化与语义化的前端实践 · 计算机科学与技术 1 班
+        </p>
+      </div>
+
+      <nav class="site-footer__links" aria-label="页脚导航">
+        <div>
+          <p class="site-footer__col-title">站内</p>
+          <ul class="site-footer__list">
+            <li><a href="index.html#about">关于我</a></li>
+            <li><a href="index.html#works">作品</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__col-title">链接</p>
+          <ul class="site-footer__list">
+            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:702524434@qq.com">邮件</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© <span data-current-year>2026</span> 韦林非凡 · otto 小组</span>
+      <span>使用 HTML5 语义化标签与 CSS3 Flexbox 构建</span>
+    </div>
+
+  </div>
+</footer>

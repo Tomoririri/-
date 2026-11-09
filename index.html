@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>韦林非凡 · 个人主页</title>
+  <meta name="description" content="韦林非凡的个人介绍主页：计算机科学与技术专业，计算机 1 班。">
+  <link rel="stylesheet" href="css/common.css">
+
+  <style>
+    .section { padding: var(--space-7) 0; }
+    .section + .section { border-top: 1px solid var(--color-line); }
+    .section__lead { max-width: 680px; color: var(--color-body); }
+
+    .hero { padding: var(--space-7) 0 var(--space-6); }
+    .hero__eyebrow {
+      display: inline-block; margin-bottom: var(--space-3);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-pill);
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-size: var(--text-small);
+    }
+    .hero__title { font-size: var(--text-h1); margin-bottom: var(--space-3); }
+    .hero__desc { max-width: 620px; font-size: 18px; color: var(--color-body); }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 44px; padding: 0 var(--space-5);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-body); font-weight: 600;
+      transition: background .2s var(--ease), color .2s var(--ease);
+    }
+    .btn--primary { background: var(--color-primary); color: #fff; }
+    .btn--primary:hover { background: var(--color-primary-dark); color: #fff; }
+    .btn--ghost { border: 1px solid var(--color-line); color: var(--color-ink); background: var(--color-bg); }
+    .btn--ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    .card-grid {
+      display: grid; gap: var(--space-4);
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .card {
+      padding: var(--space-5);
+      background: var(--color-bg);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--card-shadow);
+      transition: transform .2s var(--ease);
+    }
+    .card:hover { transform: translateY(-3px); }
+    .card__title { margin: 0 0 var(--space-2); font-size: 17px; font-weight: 700; color: var(--color-ink); }
+    .card__text { margin: 0; font-size: var(--text-small); color: var(--color-body); }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+    .tag {
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-pill);
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-size: var(--text-small);
+    }
+
+    .info-list {
+      display: grid; gap: var(--space-3);
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      margin: var(--space-5) 0 0; padding: 0; list-style: none;
+    }
+    .info-list__item {
+      padding: var(--space-4);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      background: var(--color-bg-soft);
+    }
+    .info-list__label { display: block; font-size: var(--text-small); color: var(--color-muted); margin-bottom: var(--space-1); }
+    .info-list__value { font-weight: 600; color: var(--color-ink); }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">跳到主内容</a>
+
+  <div data-include="components/header.html"></div>
+
+  <main id="main">
+
+    <!-- ===== 首屏 ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero__eyebrow">计算机科学与技术 · 计算机 1 班</span>
+        <h1 class="hero__title">你好，我是韦林非凡</h1>
+        <p class="hero__desc">
+          学号 1244030126。喜欢把界面做得干净，也喜欢把代码写成能复用的组件。
+          这个主页就是用 HTML5 语义化标签和 CSS3 Flexbox 手写的，没有用框架。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#works">看作品</a>
+          <a class="btn btn--ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 关于我 ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>关于我</h2>
+        <p class="section__lead">
+          我在意两件事：一是页面在手机和电脑上都别变形，二是同样的页头页脚不要写两遍。
+          所以这个站点先做组件，再拼页面。写代码之外，我也喜欢折腾工具——
+          给电脑装语音模型、给聊天机器人配人设，这些事比写作业有意思。
+        </p>
+        <ul class="info-list">
+          <li class="info-list__item">
+            <span class="info-list__label">姓名</span>
+            <span class="info-list__value">韦林非凡</span>
+          </li>
+          <li class="info-list__item">
+            <span class="info-list__label">学号</span>
+            <span class="info-list__value">1244030126</span>
+          </li>
+          <li class="info-list__item">
+            <span class="info-list__label">班级</span>
+            <span class="info-list__value">计算机科学与技术 1 班</span>
+          </li>
+          <li class="info-list__item">
+            <span class="info-list__label">小组</span>
+            <span class="info-list__value">otto（4 人）</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 技能 ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>技能</h2>
+        <p class="section__lead">下面这些是我做课程项目时实际用到的。</p>
+        <div class="card-grid" style="margin-top: var(--space-5);">
+          <article class="card">
+            <h3 class="card__title">语义化 HTML</h3>
+            <p class="card__text">用 header / nav / main / section / footer 分区，而不是一堆 div。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">CSS 组件化</h3>
+            <p class="card__text">颜色、间距、圆角全定义成变量，改一处全站生效。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">响应式布局</h3>
+            <p class="card__text">Flexbox 排版，768px 以下导航收进汉堡菜单。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Java 与数据库</h3>
+            <p class="card__text">JAVAEE 课程做过完整实验，数据库课做过表设计与查询优化。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Python 与工具链</h3>
+            <p class="card__text">写过脚本处理文件、跑过语音模型，也配过本地的 AI 服务。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">无障碍意识</h3>
+            <p class="card__text">键盘能走完全站，焦点可见，用 aria 标注菜单状态。</p>
+          </article>
+        </div>
+        <div class="tag-list">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Flexbox</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Java</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">BEM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 作品 ===== -->
+    <section class="section" id="works">
+      <div class="container">
+        <h2>作品</h2>
+        <p class="section__lead">最近一年做过的几个东西。</p>
+        <div class="card-grid" style="margin-top: var(--space-5);">
+          <article class="card">
+            <h3 class="card__title">个人介绍主页</h3>
+            <p class="card__text">就是这个页面。组件化拆分 + 响应式，纯手写，没有用框架。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">企业家采访实践</h3>
+            <p class="card__text">《企业家精神与领导力》期末项目，采访校门口水果摊摊主，从选题、提纲到成片和文稿全流程。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">AI 编程入门作品</h3>
+            <p class="card__text">课程期末作品，把想法拆成可执行的步骤，再用工具一步步实现。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">数据库课程作业</h3>
+            <p class="card__text">从表结构设计到查询优化，做完才发现索引不是越多越好。</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">JAVAEE 实验</h3>
+            <p class="card__text">四组实验报告，从环境搭建到接口联调，踩过不少依赖冲突的坑。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 联系 ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>联系我</h2>
+        <p class="section__lead">
+          有事可以发邮件。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="mailto:702524434@qq.com">发邮件</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/include.js"></script>
+</body>
+</html>
